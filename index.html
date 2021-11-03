@@ -31,8 +31,7 @@
 
                 <!-- container delle chat -->
                 <div class="chat_list_container">
-                    <!-- qui dentro ci va un v-for che stampa le chat -->
-                    <!-- layout di cosa deve stampare il v-for -->
+                    <!-- single chat list item che dovrà stampare il v-for -->
                     <div class="chat_list_item">
                         <div class="chat_list_item_profile_pic">
                             <img src="https://i.pinimg.com/564x/2a/cc/4b/2acc4b81cc7eaea1d7e125f182320d90.jpg" alt="immagine prova">
@@ -41,7 +40,6 @@
                             <h3><!-- nome della persona con cui si sta chattando -->Mario</h3>
                             <p><!-- anteprima dei messaggi -->Ciao come va?</p>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -50,6 +48,17 @@
             <div class="right_container">
                 <!-- nav-bar di destra, che contiene il profilo dell'utente con il quale si sta parlando -->
                 <div class="right_navbar"></div>
+
+                <div class="main_message_container">
+                    <!-- messaggi che dovrà stampare il v-for -->
+                    <!-- a seconda se il messaggio viene dall'array dei messaggi inviati o da quello dei messaggi ricevuti, avrà una classe diversa -->
+                    <div class="single_message sent_message_container">
+                        <p>Messaggio inviato</p>
+                    </div>
+                    <div class="single_message received_message_container">
+                        <p>Messaggio ricevuto</p>
+                    </div>
+                </div>
             </div>
         </div>
         
