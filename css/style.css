@@ -25,6 +25,18 @@
     width: 65%;
     height: 95%;
     margin: auto;
-    border: 1px solid;
+    border: 1px solid;/* giusto per visualizzare */
+    display: flex;
+    gap: 2px;     /* giusto per visualizzare */
+    padding: 2px  /* giusto per visualizzare */
 }
 
+.main_container .left_container{
+   width: 30%;
+   border: 1px solid blue;/* giusto per visualizzare */
+}
+.main_container .right_container{
+    width: 70%;
+    border: 1px solid blue;/* giusto per visualizzare */
+
+}
