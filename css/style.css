@@ -36,7 +36,6 @@ a{
 /** CONTAINER SINISTRO */
 .main_container .left_container{
     width: 40%;
-    border: 1px solid blue;/* giusto per visualizzare */
     display: flex;
     flex-direction: column;
 }
@@ -58,6 +57,9 @@ a{
 }
 .left_navbar .left_navbar_profile_info{
         flex-grow: 1;
+}
+.left_navbar .left_navbar_menu_options{
+    padding: 0 10px;
 }
 .left_navbar .left_navbar_menu_options i{
     font-size: 20px;
@@ -84,29 +86,42 @@ a{
     color: #8edafa;
 }
 
+/* barra di ricerca delle chats */
 .left_container .chat_src_bar{
-    border: 1px solid red; /* giusto per visualizzare */
-    height: 30px;
     flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    background-color: #f2fbff;
+    padding: 10px;
 }
+.chat_src_bar i{
+    font-size: 20px;
+    padding: 0 10px;
+    color: gray;
+}
+.chat_src_bar .chat_src_input_text{
+    flex-grow: 1;
+    border: white;
+    padding: 5px;
+}
+
 /* lista delle chat */
 .left_container .chat_list_container{
     flex-grow: 1;
-    border: 1px solid red; /* giusto per visualizzare */
     overflow: auto;
     display: flex;
     flex-direction: column;
+    background-color: white;
 }
 
 .chat_list_container .chat_list_item{
     padding: 5px;
     display: flex;
     gap: 6px;
-    border: 1px solid blue; /* giusto per visualizzare */
+    border-top: 1px solid lightgray;
 }
 .chat_list_item .chat_list_item_profile_pic{
     height: 60px;
-    border: 1px solid green; /* giusto per visualizzare */
 }
 .chat_list_item_profile_pic img{
     height: 100%;
@@ -114,28 +129,41 @@ a{
 }
 .chat_list_item_info{
     flex-grow: 1;
-    border: 1px solid green; /* giusto per visualizzare */
 } 
-.chat_list_item_info h3{
-    border: 1px solid green; /* giusto per visualizzare */
-}
-.chat_list_item_info p{
-    border: 1px solid green; /* giusto per visualizzare */
-}
 
 
 /** CONTAINER DESTRO  */
 .main_container .right_container{
     width: 60%;
-    border: 1px solid blue;/* giusto per visualizzare */
     display: flex;
     flex-direction: column;
-    padding: 2px; /* giusto per visualizzare */
 }
 .right_container .right_navbar{
-    border: 1px solid red; /* giusto per visualizzare */
     height: 70px;
+    display: flex;
+    align-items: center;
+    background-color: lightgray;
+    border-left: 1px solid gray;
 }
+.right_navbar .right_navbar_profile_pic{
+    height: 100%;
+}
+.right_navbar .right_navbar_profile_pic img{
+    height: 100%;
+    border-radius: 50%;
+    padding: 5px;
+}
+.right_navbar .right_navbar_profile_info{
+        flex-grow: 1;
+}
+.right_navbar .right_navbar_menu_options{
+    padding: 0 10px;
+}
+.right_navbar .right_navbar_menu_options i{
+    font-size: 20px;
+    padding: 5px;
+}
+
 /* container dei messaggi */
 .main_message_container{
     padding: 20px;

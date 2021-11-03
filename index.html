@@ -54,7 +54,12 @@
                 </div>
 
                 <!-- barra di ricerca chat per nome -->
-                <div class="chat_src_bar"></div>
+                <div class="chat_src_bar">
+                        <div class="chat_src_icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <input type="text" placeholder="cerca una chat" class="chat_src_input_text">
+                </div>
 
                 <!-- container delle chat -->
                 <div class="chat_list_container">
@@ -74,7 +79,27 @@
             <!-- container di destra che contiene la chat selezionata -->
             <div class="right_container">
                 <!-- nav-bar di destra, che contiene il profilo dell'utente con il quale si sta parlando -->
-                <div class="right_navbar"></div>
+                <div class="right_navbar">
+                    <div class="right_navbar_profile_pic">
+                        <img src="https://i.pinimg.com/564x/2a/cc/4b/2acc4b81cc7eaea1d7e125f182320d90.jpg" alt="immagine di prova">
+                    </div>
+                    <div class="right_navbar_profile_info">
+                        <h3>Marco</h3>
+                        <p>ultimo accesso...</p>
+                    </div>
+                    <div class="right_navbar_menu_options">
+                        <!-- icone -->
+                        <a href="#">
+                            <i class="fas fa-circle-notch"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fas fa-comment-alt"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fas fa-ellipsis-v"></i>
+                        </a>
+                    </div>
+                </div>
 
                 <div class="main_message_container">
                     <!-- messaggi che dovrà stampare il v-for -->
