@@ -31,6 +31,7 @@
     padding: 2px  /* giusto per visualizzare */
 }
 
+/** CONTAINER SINISTRO */
 .main_container .left_container{
    width: 30%;
    border: 1px solid blue;/* giusto per visualizzare */
@@ -54,6 +55,7 @@
     height: 30px;
     flex-shrink: 0;
 }
+/* lista delle chat */
 .left_container .chat_list_container{
     flex-grow: 1;
     border: 1px solid red; /* giusto per visualizzare */
@@ -79,10 +81,11 @@
 } 
 
 
-
+/** CONTAINER DESTRO  */
 .main_container .right_container{
     width: 70%;
     border: 1px solid blue;/* giusto per visualizzare */
+    display: flex;
     flex-direction: column;
     padding: 2px; /* giusto per visualizzare */
 }
@@ -90,8 +93,11 @@
     border: 1px solid red; /* giusto per visualizzare */
     height: 70px;
 }
+/* container dei messaggi */
 .main_message_container{
     padding: 20px;
+    flex-grow: 1;
+    border: 1px solid green;/* giusto per visualizzare */
 }
 .main_message_container .single_message{
     display: flex;
@@ -105,13 +111,20 @@
 }
 .main_message_container .sent_message_container{
     justify-content: flex-end;
+    border: 1px solid red;/* giusto per visualizzare */
 }
 .sent_message_container > p{
     background-color: #d5f9be;
 }
 .main_message_container .received_message_container{
     justify-content: flex-start;
+    border: 1px solid red;/* giusto per visualizzare */
 }
 .received_message_container > p{
     background-color: #fff;
+}
+/* nuovo messaggio contenitore */
+.new_message_container{
+    min-height: 50px;
+    border: 1px solid green;/* giusto per visualizzare */
 }
