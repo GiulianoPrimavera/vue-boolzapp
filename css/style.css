@@ -28,9 +28,7 @@ a{
     width: 1000px;
     height: 95%;
     margin: auto;
-    border: 1px solid;/* giusto per visualizzare */
     display: flex;
-    padding: 2px  /* giusto per visualizzare */
 }
 
 /** CONTAINER SINISTRO */
@@ -168,7 +166,7 @@ a{
 .main_message_container{
     padding: 20px;
     flex-grow: 1;
-    border: 1px solid green;/* giusto per visualizzare */
+    background-image: url(../img/mine.jpg);
 }
 .main_message_container .single_message{
     display: flex;
@@ -182,18 +180,17 @@ a{
 }
 .main_message_container .sent_message_container{
     justify-content: flex-end;
-    border: 1px solid red;/* giusto per visualizzare */
 }
 .sent_message_container > p{
     background-color: #d5f9be;
 }
 .main_message_container .received_message_container{
     justify-content: flex-start;
-    border: 1px solid red;/* giusto per visualizzare */
 }
 .received_message_container > p{
     background-color: #fff;
 }
+
 /* nuovo messaggio contenitore */
 .new_message_container{
     min-height: 50px;
