@@ -3,3 +3,17 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+.container_root{
+    background-color: lightgray;
+    height: 100vh;
+    position: relative;
+}
+.green_badge{
+    height: 15vh;
+    background-color: #0b9587;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
