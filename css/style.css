@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 a{
-    text-decoration: none;
     color: gray;
 }
 
@@ -16,7 +15,7 @@ a{
     z-index: -1;
 }
 .green_badge{
-    height: 15vh;
+    height: 25vh;
     background-color: #0b9587;
     position: absolute;
     top: 0;
@@ -31,53 +30,60 @@ a{
     margin: auto;
     border: 1px solid;/* giusto per visualizzare */
     display: flex;
-    gap: 2px;     /* giusto per visualizzare */
     padding: 2px  /* giusto per visualizzare */
 }
 
 /** CONTAINER SINISTRO */
 .main_container .left_container{
-   width: 30%;
-   border: 1px solid blue;/* giusto per visualizzare */
+    width: 40%;
+    border: 1px solid blue;/* giusto per visualizzare */
     display: flex;
     flex-direction: column;
-    padding: 2px; /* giusto per visualizzare */
-    gap: 2px;
 }
 /* navbar di sinistra */
 .left_container .left_navbar{
-    border: 1px solid red; /* giusto per visualizzare */
     height: 70px;
     flex-shrink: 0;
     display: flex;
     align-items: center;
+    background-color: lightgray;
 }
-/* foto profilo */
 .left_navbar .left_navbar_profile_pic{
     height: 100%;
-    border: 1px solid red; /* giusto per visualizzare */
 }
 .left_navbar .left_navbar_profile_pic img{
     height: 100%;
     border-radius: 50%;
+    padding: 5px;
 }
 .left_navbar .left_navbar_profile_info{
-    border: 1px solid red; /* giusto per visualizzare */
-    flex-grow: 1;
-}
-.left_navbar .left_navbar_menu_options{
-    border: 1px solid red; /* giusto per visualizzare */
+        flex-grow: 1;
 }
 .left_navbar .left_navbar_menu_options i{
     font-size: 20px;
     padding: 5px;
 }
 
-.left_container .notification_warning{
-    border: 1px solid red; /* giusto per visualizzare */
-    height: 70px;
+/* avviso delle notifiche */
+.left_container .notification_container{
+    background-color: #8edafa;
+    height: 80px;
     flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 5px;
 }
+.notification_container .notification_icon{
+    background-color: #f2fbff;
+    border-radius: 50%;
+    padding: 10px;
+}
+.notification_icon i{
+    font-size: 20px;
+    color: #8edafa;
+}
+
 .left_container .chat_src_bar{
     border: 1px solid red; /* giusto per visualizzare */
     height: 30px;
@@ -120,7 +126,7 @@ a{
 
 /** CONTAINER DESTRO  */
 .main_container .right_container{
-    width: 70%;
+    width: 60%;
     border: 1px solid blue;/* giusto per visualizzare */
     display: flex;
     flex-direction: column;
