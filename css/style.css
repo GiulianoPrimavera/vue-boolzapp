@@ -34,9 +34,22 @@
 .main_container .left_container{
    width: 30%;
    border: 1px solid blue;/* giusto per visualizzare */
+    display: flex;
+    flex-direction: column;
+    padding: 2px; /* giusto per visualizzare */
 }
 .main_container .right_container{
     width: 70%;
     border: 1px solid blue;/* giusto per visualizzare */
+    flex-direction: column;
+    padding: 2px; /* giusto per visualizzare */
+}
 
+.left_container .left_navbar{
+    border: 1px solid red; /* giusto per visualizzare */
+    height: 70px;
+}
+.right_container .right_navbar{
+    border: 1px solid red; /* giusto per visualizzare */
+    height: 70px;
 }
