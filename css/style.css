@@ -37,17 +37,36 @@
     display: flex;
     flex-direction: column;
     padding: 2px; /* giusto per visualizzare */
+    gap: 2px;
 }
+.left_container .left_navbar{
+    border: 1px solid red; /* giusto per visualizzare */
+    height: 70px;
+    flex-shrink: 0;
+}
+.left_container .notification_warning{
+    border: 1px solid red; /* giusto per visualizzare */
+    height: 70px;
+    flex-shrink: 0;
+}
+.left_container .chat_src_bar{
+    border: 1px solid red; /* giusto per visualizzare */
+    height: 30px;
+    flex-shrink: 0;
+}
+.left_container .chat_list_container{
+    flex-grow: 1;
+    border: 1px solid red; /* giusto per visualizzare */
+    overflow: auto;
+}
+
+
+
 .main_container .right_container{
     width: 70%;
     border: 1px solid blue;/* giusto per visualizzare */
     flex-direction: column;
     padding: 2px; /* giusto per visualizzare */
-}
-
-.left_container .left_navbar{
-    border: 1px solid red; /* giusto per visualizzare */
-    height: 70px;
 }
 .right_container .right_navbar{
     border: 1px solid red; /* giusto per visualizzare */
