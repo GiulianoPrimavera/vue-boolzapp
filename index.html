@@ -82,10 +82,10 @@
                 <!-- nav-bar di destra, che contiene il profilo dell'utente con il quale si sta parlando -->
                 <div class="right_navbar">
                     <div class="right_navbar_profile_pic">
-                        <img src="img/avatar_1.jpg" alt="immagine di prova">
+                        <img :src="activeChat.profilePic">
                     </div>
                     <div class="right_navbar_profile_info">
-                        <h3>Marco</h3>
+                        <h3>{{activeChat.userName}}</h3>
                         <p>ultimo accesso...</p>
                     </div>
                     <div class="right_navbar_menu_options">
@@ -105,12 +105,17 @@
                 <div class="main_message_container">
                     <!-- messaggi che dovrà stampare il v-for -->
                     <!-- a seconda se il messaggio viene dall'array dei messaggi inviati o da quello dei messaggi ricevuti, avrà una classe diversa -->
-                    <div class="single_message sent_message_container">
+                    <!-- <div class="single_message sent_message_container">
                         <p>Messaggio inviato</p>
                     </div>
                     <div class="single_message received_message_container">
                         <p>Messaggio ricevuto</p>
                     </div>
+ -->
+                    <div class="single_message" v-for="singleMessage in activeChat.messages">
+                        <p></p>
+                    </div>
+
                     
                     
                     
