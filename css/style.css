@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 a{
-    color: gray;
+    color: #b2b1b1;
 }
 
 .container_root{
@@ -43,7 +43,7 @@ a{
     flex-shrink: 0;
     display: flex;
     align-items: center;
-    background-color: lightgray;
+    background-color: #e9eaea;
 }
 .left_navbar .left_navbar_profile_pic{
     height: 100%;
@@ -140,8 +140,8 @@ a{
     height: 70px;
     display: flex;
     align-items: center;
-    background-color: lightgray;
-    border-left: 1px solid gray;
+    background-color: #e9eaea;
+    border-left: 1px solid lightgray;
 }
 .right_navbar .right_navbar_profile_pic{
     height: 100%;
@@ -202,7 +202,9 @@ a{
     gap: 10px;
     padding: 0 15px;
 }
-
+.new_message_container i{
+    color: #6b7275;
+}
 .new_message_container .new_message_text_area{
     flex-grow: 1;
 }
