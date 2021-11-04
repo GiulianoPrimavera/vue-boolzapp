@@ -63,12 +63,13 @@ window.addEventListener("DOMContentLoaded", function(){
                     ]
                 }
             ],
-            activeChat: null
+            activeChat: {}
         },
         methods:{
             onChatClick(chat){
                 this.activeChat = chat;
                 console.log(`questa è la chat di ${this.activeChat.userName}`, this.activeChat);
+                console.log(this.activeChat.messages[0].text);
             }
         }
     })
