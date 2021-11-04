@@ -63,13 +63,19 @@ window.addEventListener("DOMContentLoaded", function(){
                     ]
                 }
             ],
-            activeChat: {}
+            activeChat: {},
+            inputNewMessage: "",
         },
         methods:{
             onChatClick(chat){
                 this.activeChat = chat;
                 console.log(`questa è la chat di ${this.activeChat.userName}`, this.activeChat);
-                /* console.log(this.activeChat.messages[1].status); */
+            },
+            sendMessage(){
+                console.log(`mando un messaggio a ${this.activeChat.userName}`, this.activeChat.messages);
+                /* devo eseguire all'interno dell'array di oggetti: messages, un oggetto contenente il messaggio */
+                this.activeChat.messages.push({text: this.inputNewMessage, status: "sent"})
+                this.inputNewMessage = "";
             }
         }
     })
