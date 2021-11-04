@@ -168,27 +168,23 @@ a{
     flex-grow: 1;
     overflow: auto;
 }
-.main_message_container .single_message{
+.main_message_container .single_message_container{
     display: flex;
-    padding-left: 20px;
-    padding-right: 20px;
+    flex-direction: column;
 } 
-.single_message > p{
+.single_message_container > p{
     min-height: 50px;
     padding: 10px;
     border-radius: 10px;
 }
-.main_message_container .sent_message_container{
-    justify-content: flex-end;
-}
-.sent_message_container > p{
+
+.single_message_container .sent_message_text{
     background-color: #d5f9be;
+    align-self: end;
 }
-.main_message_container .received_message_container{
-    justify-content: flex-start;
-}
-.received_message_container > p{
+.single_message_container .received_message_text{
     background-color: #fff;
+    align-self: start;
 }
 
 /* nuovo messaggio contenitore */
