@@ -103,17 +103,10 @@
                 </div>
 
                 <div class="main_message_container">
-                    <!-- messaggi che dovrà stampare il v-for -->
-                    <!-- a seconda se il messaggio viene dall'array dei messaggi inviati o da quello dei messaggi ricevuti, avrà una classe diversa -->
-                    <!-- <div class="single_message sent_message_container">
-                        <p>Messaggio inviato</p>
-                    </div>
-                    <div class="single_message received_message_container">
-                        <p>Messaggio ricevuto</p>
-                    </div>
- -->
-                    <div class="single_message" v-for="singleMessage in activeChat.messages">
-                        <p></p>
+                    <!-- messaggi di ogni singola chat -->
+                    <div class="single_message_container" v-for="singleMessage in activeChat.messages">
+                        <p v-if="singleMessage.status === 'received'" class="received_message_text">{{ singleMessage.text }}</p>
+                        <p v-else-if="singleMessage.status === 'sent'" class="sent_message_text">{{ singleMessage.text }}</p>
                     </div>
 
                     
