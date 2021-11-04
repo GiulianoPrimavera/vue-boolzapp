@@ -12,16 +12,14 @@ a{
     height: 100vh;
     position: relative;
     padding-top: 20px;
-    z-index: -1;
 }
 .green_badge{
-    height: 25vh;
+    height: 125px;
     background-color: #0b9587;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    z-index: -1;
 }
 
 .main_container{
@@ -29,6 +27,7 @@ a{
     height: 95%;
     margin: auto;
     display: flex;
+    position: relative;
 }
 
 /** CONTAINER SINISTRO */
