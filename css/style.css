@@ -171,6 +171,7 @@ a{
 .main_message_container .single_message_container{
     display: flex;
     flex-direction: column;
+    margin: 10px 0;
 } 
 .single_message_container > p{
     min-height: 50px;
