@@ -23,7 +23,7 @@
                 <!-- nav-bar di sinistra, che contiene il profilo dell'utente -->
                 <div class="left_navbar">
                     <div class="left_navbar_profile_pic">
-                        <img src="https://i.pinimg.com/564x/2a/cc/4b/2acc4b81cc7eaea1d7e125f182320d90.jpg" alt="immagine di prova">
+                        <img src="img/avatar_io.jpg" alt="immagine profilo Utente">
                     </div>
                     <div class="left_navbar_profile_info">
                         <h3>Nome Utente</h3>
@@ -64,12 +64,12 @@
                 <!-- container delle chat -->
                 <div class="chat_list_container">
                     <!-- single chat list item che dovrà stampare il v-for -->
-                    <div class="chat_list_item">
+                    <div class="chat_list_item" v-for="singleChat, i in chatList">
                         <div class="chat_list_item_profile_pic">
-                            <img src="https://i.pinimg.com/564x/2a/cc/4b/2acc4b81cc7eaea1d7e125f182320d90.jpg" alt="immagine prova">
+                            <img :src="singleChat.profilePic" alt="immagine di profilo {{ i }}">
                         </div>
                         <div class="chat_list_item_info">
-                            <h3><!-- nome della persona con cui si sta chattando -->Mario</h3>
+                            <h3>{{singleChat.userName}}</h3>
                             <p><!-- anteprima dei messaggi -->Ciao come va?</p>
                         </div>
                     </div>
@@ -81,7 +81,7 @@
                 <!-- nav-bar di destra, che contiene il profilo dell'utente con il quale si sta parlando -->
                 <div class="right_navbar">
                     <div class="right_navbar_profile_pic">
-                        <img src="https://i.pinimg.com/564x/2a/cc/4b/2acc4b81cc7eaea1d7e125f182320d90.jpg" alt="immagine di prova">
+                        <img src="img/avatar_1.jpg" alt="immagine di prova">
                     </div>
                     <div class="right_navbar_profile_info">
                         <h3>Marco</h3>
