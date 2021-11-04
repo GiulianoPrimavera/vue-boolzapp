@@ -64,9 +64,10 @@
                 <!-- container delle chat -->
                 <div class="chat_list_container">
                     <!-- single chat list item che dovrà stampare il v-for -->
-                    <div class="chat_list_item" v-for="singleChat, i in chatList">
+                    <div class="chat_list_item" v-for="singleChat, i in chatList"
+                    @click="onChatClick(singleChat)">
                         <div class="chat_list_item_profile_pic">
-                            <img :src="singleChat.profilePic" alt="immagine di profilo {{ i }}">
+                            <img :src="singleChat.profilePic" alt="immagine profilo {{ i }}">
                         </div>
                         <div class="chat_list_item_info">
                             <h3>{{singleChat.userName}}</h3>
@@ -110,6 +111,9 @@
                     <div class="single_message received_message_container">
                         <p>Messaggio ricevuto</p>
                     </div>
+                    
+                    
+                    
                 </div>
 
                 <div class="new_message_container">
