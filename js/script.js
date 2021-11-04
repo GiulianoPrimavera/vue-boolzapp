@@ -5,7 +5,24 @@ window.addEventListener("DOMContentLoaded", function(){
     const vueApp = new Vue ({
         el: "#root",
         data: {
-            message: "ciao mondo"
+            chatList: [
+                {
+                    userName: "Marco",
+                    profilePic: "img/avatar_1.jpg"
+                },
+                {
+                    userName: "Luca",
+                    profilePic: "img/avatar_2.jpg"
+                },
+                {
+                    userName: "Giovanni",
+                    profilePic: "img/avatar_3.jpg"
+                },
+                {
+                    userName: "Luigi",
+                    profilePic: "img/avatar_4.jpg"
+                }
+            ]
         }
     })
 })
