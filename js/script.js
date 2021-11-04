@@ -12,10 +12,10 @@ window.addEventListener("DOMContentLoaded", function(){
                     messages: [
                         {
                             text: "sono Marco",
-                            status: "recieved"
+                            status: "received"
                         },
                         {
-                            text: "inviato",
+                            text: "inviato da me",
                             status: "sent"
                         }
                     ]
@@ -26,10 +26,10 @@ window.addEventListener("DOMContentLoaded", function(){
                     messages: [
                         {
                             text: "sono Luca",
-                            status: "recieved"
+                            status: "received"
                         },
                         {
-                            text: "inviato",
+                            text: "inviato da me",
                             status: "sent"
                         }
                     ]
@@ -40,10 +40,10 @@ window.addEventListener("DOMContentLoaded", function(){
                     messages: [
                         {
                             text: "sono Giovanni",
-                            status: "recieved"
+                            status: "received"
                         },
                         {
-                            text: "inviato",
+                            text: "inviato da me",
                             status: "sent"
                         }
                     ]
@@ -54,10 +54,10 @@ window.addEventListener("DOMContentLoaded", function(){
                     messages: [
                         {
                             text: "sono Luigi",
-                            status: "recieved"
+                            status: "received"
                         },
                         {
-                            text: "inviato",
+                            text: "inviato da me",
                             status: "sent"
                         }
                     ]
@@ -69,7 +69,7 @@ window.addEventListener("DOMContentLoaded", function(){
             onChatClick(chat){
                 this.activeChat = chat;
                 console.log(`questa è la chat di ${this.activeChat.userName}`, this.activeChat);
-                console.log(this.activeChat.messages[0].text);
+                /* console.log(this.activeChat.messages[1].status); */
             }
         }
     })
