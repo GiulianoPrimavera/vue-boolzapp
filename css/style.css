@@ -126,7 +126,11 @@ a{
 }
 .chat_list_item_info{
     flex-grow: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 } 
+
 
 
 /** CONTAINER DESTRO  */
