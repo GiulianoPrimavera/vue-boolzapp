@@ -130,6 +130,9 @@ a{
     overflow: hidden;
     text-overflow: ellipsis;
 } 
+.chat_list_item_info p{
+    color: #b2b1b1;
+}
 
 
 
@@ -156,6 +159,9 @@ a{
 }
 .right_navbar .right_navbar_profile_info{
         flex-grow: 1;
+}
+.right_navbar .right_navbar_profile_info p{
+    color: #b2b1b1;
 }
 .right_navbar .right_navbar_menu_options{
     padding: 0 10px;
