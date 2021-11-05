@@ -59,13 +59,14 @@
                         <div class="chat_src_icon">
                             <i class="fas fa-search"></i>
                         </div>
-                        <input type="text" placeholder="cerca una chat" class="chat_src_input_text">
+                        <input type="text" v-model="chatSrcText" placeholder="cerca una chat" class="chat_src_input_text"> 
                 </div>
 
                 <!-- container delle chat -->
                 <div class="chat_list_container">
                     <!-- single chat list item che dovrà stampare il v-for -->
-                    <div class="chat_list_item" v-for="singleChat, i in chatList"
+                    <!--                                                uso questa funzione perché ritorna un array (in questo caso filtrato o meno a seconda del testo cercato) -->
+                    <div class="chat_list_item" v-for="singleChat, i in getFilteredChats()"
                     @click="onChatClick(singleChat)">
                         <div class="chat_list_item_profile_pic">
                             <img :src="singleChat.profilePic" alt="immagine profilo {{ i }}">

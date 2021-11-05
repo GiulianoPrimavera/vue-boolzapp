@@ -77,6 +77,7 @@ window.addEventListener("DOMContentLoaded", function(){
             ],
             activeChat: {},
             inputNewMessage: "",
+            chatSrcText: ""
         },
         methods:{
             onChatClick(chat){
@@ -104,6 +105,17 @@ window.addEventListener("DOMContentLoaded", function(){
                     console.log("questo è lulimo accesso", this.activeChat.lastSeen);
                     this.activeChat.lastSeen = dayjs().format("DD/MM/YY HH:mm:ss");
                 }, 1000)
+            },
+            //questa funzione ritorna un array filtrato
+            getFilteredChats(){
+                if (!this.chatSrcText){
+                    //se nell'input di testo non ci sono stringhe da utilizzare nella funzione filter() allora ritorno l'intero array dei contatti
+                    return this.chatList;
+                }
+                //la funzione filter() ritorna un array contenente gli elementi che includono il testo digitato nell'input di testo  
+                return this.chatList.filter((contact) => {
+                   return contact.userName.toLowerCase().includes(this.chatSrcText.toLowerCase().trim())
+                })
             }
         },
         
