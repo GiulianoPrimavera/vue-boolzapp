@@ -71,7 +71,7 @@
                         </div>
                         <div class="chat_list_item_info">
                             <h3>{{singleChat.userName}}</h3>
-                            <p><!-- anteprima dei messaggi -->Ciao come va?</p>
+                            {{ singleChat.messages[singleChat.messages.length - 1].text }}
                         </div>
                     </div>
                 </div>
