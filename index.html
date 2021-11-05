@@ -87,7 +87,7 @@
                     </div>
                     <div class="right_navbar_profile_info">
                         <h3>{{activeChat.userName}}</h3>
-                        <p>ultimo accesso oggi alle</p>
+                        <p v-if="activeChat.userName">ultimo accesso oggi alle</p>
                     </div>
                     <div class="right_navbar_menu_options">
                         <!-- icone -->
