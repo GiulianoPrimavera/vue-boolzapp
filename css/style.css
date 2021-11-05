@@ -129,7 +129,14 @@ a{
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    position: relative;
 } 
+.chat_list_item_info .last_seen_chat_list{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 12px;
+}
 .chat_list_item_info p{
     color: #b2b1b1;
 }
