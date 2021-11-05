@@ -72,7 +72,12 @@ window.addEventListener("DOMContentLoaded", function(){
                 console.log(`questa è la chat di ${this.activeChat.userName}`, this.activeChat);
             },
             sendMessage(){
-                
+                /* se activeChat è un oggetto vuoto allora devo bloccare l'input del testo del nuovo messaggio */
+                if (Object.keys(this.activeChat).length === 0 ){
+                    console.log("blocco il messaggio");
+                    return
+                }
+
                 console.log(`mando un messaggio a ${this.activeChat.userName}`, this.activeChat.messages);
                 /* devo eseguire all'interno dell'array di oggetti: messages, un oggetto contenente il messaggio */
                 this.activeChat.messages.push({text: this.inputNewMessage, status: "sent"})
@@ -80,7 +85,7 @@ window.addEventListener("DOMContentLoaded", function(){
 
                 setTimeout(() =>{
                     console.log("risposta");
-                    this.activeChat.messages.push({text: "ciao di risposta", status: "received"})
+                    this.activeChat.messages.push({text: "ok", status: "received"})
                 }, 1000)
             }
         },
