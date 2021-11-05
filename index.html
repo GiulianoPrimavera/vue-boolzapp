@@ -105,8 +105,15 @@
                 <div class="main_message_container">
                     <!-- messaggi di ogni singola chat -->
                     <div class="single_message_container" v-for="singleMessage in activeChat.messages">
-                        <p v-if="singleMessage.status === 'received'" class="received_message_text">{{ singleMessage.text }}</p>
-                        <p v-else-if="singleMessage.status === 'sent'" class="sent_message_text">{{ singleMessage.text }}</p>
+                        <div v-if="singleMessage.status === 'received'" class="received_message_text_container">
+                            <p>{{ singleMessage.text }}</p>
+                            <p>{{singleMessage.date}}</p>
+                        </div>
+                        
+                        <div v-else-if="singleMessage.status === 'sent'" class="sent_message_text_container">
+                            <p>{{ singleMessage.text }}</p>
+                            <p>{{singleMessage.date}}</p>
+                        </div>
                     </div>
 
                     
