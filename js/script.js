@@ -20,7 +20,8 @@ window.addEventListener("DOMContentLoaded", function(){
                             text: "inviato da me",
                             status: "sent"
                         }
-                    ]
+                    ],
+                    lastSeen: "ultimo accesso"
                 },
                 {
                     userName: "Luca",
@@ -36,7 +37,8 @@ window.addEventListener("DOMContentLoaded", function(){
                             text: "inviato da me",
                             status: "sent"
                         }
-                    ]
+                    ],
+                    lastSeen: "ultimo accesso"
                 },
                 {
                     userName: "Giovanni",
@@ -52,7 +54,8 @@ window.addEventListener("DOMContentLoaded", function(){
                             text: "inviato da me",
                             status: "sent"
                         }
-                    ]
+                    ],
+                    lastSeen: "ultimo accesso"
                 },
                 {
                     userName: "Luigi",
@@ -68,7 +71,8 @@ window.addEventListener("DOMContentLoaded", function(){
                             text: "inviato da me",
                             status: "sent"
                         }
-                    ]
+                    ],
+                    lastSeen: "ultimo accesso"
                 }
             ],
             activeChat: {},
