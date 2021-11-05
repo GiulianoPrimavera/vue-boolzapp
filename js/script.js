@@ -11,10 +11,12 @@ window.addEventListener("DOMContentLoaded", function(){
                     profilePic: "img/avatar_1.jpg",
                     messages: [
                         {
+                            date: "10/01/2020 15:30:55",
                             text: "sono Marco",
                             status: "received"
                         },
                         {
+                            date: "10/01/2020 15:30:55",
                             text: "inviato da me",
                             status: "sent"
                         }
@@ -25,10 +27,12 @@ window.addEventListener("DOMContentLoaded", function(){
                     profilePic: "img/avatar_2.jpg",
                     messages: [
                         {
+                            date: "10/01/2020 15:30:55",
                             text: "sono Luca",
                             status: "received"
                         },
                         {
+                            date: "10/01/2020 15:30:55",
                             text: "inviato da me",
                             status: "sent"
                         }
@@ -39,10 +43,12 @@ window.addEventListener("DOMContentLoaded", function(){
                     profilePic: "img/avatar_3.jpg",
                     messages: [
                         {
+                            date: "10/01/2020 15:30:55",
                             text: "sono Giovanni",
                             status: "received"
                         },
                         {
+                            date: "10/01/2020 15:30:55",
                             text: "inviato da me",
                             status: "sent"
                         }
@@ -53,10 +59,12 @@ window.addEventListener("DOMContentLoaded", function(){
                     profilePic: "img/avatar_4.jpg",
                     messages: [
                         {
+                            date: "10/01/2020 15:30:55",
                             text: "sono Luigi",
                             status: "received"
                         },
                         {
+                            date: "10/01/2020 15:30:55",
                             text: "inviato da me",
                             status: "sent"
                         }
