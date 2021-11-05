@@ -21,7 +21,7 @@ window.addEventListener("DOMContentLoaded", function(){
                             status: "sent"
                         }
                     ],
-                    lastSeen: "ultimo accesso"
+                    lastSeen: "10/01/2020 15:30:55"
                 },
                 {
                     userName: "Luca",
@@ -38,7 +38,7 @@ window.addEventListener("DOMContentLoaded", function(){
                             status: "sent"
                         }
                     ],
-                    lastSeen: "ultimo accesso"
+                    lastSeen: "10/01/2020 15:30:55"
                 },
                 {
                     userName: "Giovanni",
@@ -55,7 +55,7 @@ window.addEventListener("DOMContentLoaded", function(){
                             status: "sent"
                         }
                     ],
-                    lastSeen: "ultimo accesso"
+                    lastSeen: "10/01/2020 15:30:55"
                 },
                 {
                     userName: "Luigi",
@@ -72,7 +72,7 @@ window.addEventListener("DOMContentLoaded", function(){
                             status: "sent"
                         }
                     ],
-                    lastSeen: "ultimo accesso"
+                    lastSeen: "10/01/2020 15:30:55"
                 }
             ],
             activeChat: {},
@@ -94,10 +94,15 @@ window.addEventListener("DOMContentLoaded", function(){
                 /* devo eseguire all'interno dell'array di oggetti: messages, un oggetto contenente il messaggio */
                 this.activeChat.messages.push({date: dayjs().format("DD/MM/YY HH:mm:ss"), text: this.inputNewMessage, status: "sent"})
                 this.inputNewMessage = "";
+               
+                
+
 
                 setTimeout(() =>{
                     console.log("risposta");
                     this.activeChat.messages.push({date: dayjs().format("DD/MM/YY HH:mm:ss"), text: "ok", status: "received"})
+                    console.log("questo è lulimo accesso", this.activeChat.lastSeen);
+                    this.activeChat.lastSeen = dayjs().format("DD/MM/YY HH:mm:ss");
                 }, 1000)
             }
         },
