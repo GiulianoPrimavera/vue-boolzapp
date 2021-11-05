@@ -183,17 +183,17 @@ a{
     flex-direction: column;
     margin: 10px 0;
 } 
-.single_message_container > p{
+.single_message_container > div{
     min-height: 50px;
     padding: 10px;
     border-radius: 10px;
 }
 
-.single_message_container .sent_message_text{
+.single_message_container .sent_message_text_container{
     background-color: #d5f9be;
     align-self: end;
 }
-.single_message_container .received_message_text{
+.single_message_container .received_message_text_container{
     background-color: #fff;
     align-self: start;
 }
