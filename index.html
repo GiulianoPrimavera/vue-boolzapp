@@ -107,12 +107,12 @@
                     <div class="single_message_container" v-for="singleMessage in activeChat.messages">
                         <div v-if="singleMessage.status === 'received'" class="received_message_text_container">
                             <p>{{ singleMessage.text }}</p>
-                            <p>{{singleMessage.date}}</p>
+                            <p class="small_date">{{singleMessage.date}}</p>
                         </div>
                         
                         <div v-else-if="singleMessage.status === 'sent'" class="sent_message_text_container">
                             <p>{{ singleMessage.text }}</p>
-                            <p>{{singleMessage.date}}</p>
+                            <p class="small_date">{{singleMessage.date}}</p>
                         </div>
                     </div>
 
