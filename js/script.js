@@ -88,12 +88,12 @@ window.addEventListener("DOMContentLoaded", function(){
 
                 console.log(`mando un messaggio a ${this.activeChat.userName}`, this.activeChat.messages);
                 /* devo eseguire all'interno dell'array di oggetti: messages, un oggetto contenente il messaggio */
-                this.activeChat.messages.push({text: this.inputNewMessage, status: "sent"})
+                this.activeChat.messages.push({date: dayjs().format("DD/MM/YY HH:mm:ss"), text: this.inputNewMessage, status: "sent"})
                 this.inputNewMessage = "";
 
                 setTimeout(() =>{
                     console.log("risposta");
-                    this.activeChat.messages.push({text: "ok", status: "received"})
+                    this.activeChat.messages.push({date: dayjs().format("DD/MM/YY HH:mm:ss"), text: "ok", status: "received"})
                 }, 1000)
             }
         },
