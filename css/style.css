@@ -167,8 +167,9 @@ a{
 .right_navbar .right_navbar_profile_info{
         flex-grow: 1;
 }
-.right_navbar .right_navbar_profile_info p{
-    color: #b2b1b1;
+.right_navbar .last_seen_right_navbar{
+    font-size: 14px;
+    color: gray;
 }
 .right_navbar .right_navbar_menu_options{
     padding: 0 10px;
