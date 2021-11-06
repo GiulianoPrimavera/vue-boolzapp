@@ -77,7 +77,9 @@ window.addEventListener("DOMContentLoaded", function(){
             ],
             activeChat: {},
             inputNewMessage: "",
-            chatSrcText: ""
+            chatSrcText: "",
+            /* dropDownSentMessageVisible: "",
+            dropDownReceivedMessageVisible: "" */
         },
         methods:{
             onChatClick(chat){
@@ -116,7 +118,31 @@ window.addEventListener("DOMContentLoaded", function(){
                 return this.chatList.filter((contact) => {
                    return contact.userName.toLowerCase().includes(this.chatSrcText.toLowerCase().trim())
                 })
-            }
+            },
+
+            /* onSentChevronClick(){
+               console.log("chevron clickata");
+               if(this.dropDownSentMessageVisible === ""){
+                   this.dropDownSentMessageVisible = "attiva";
+               }else {
+                this.dropDownSentMessageVisible = "";
+               }
+            },
+            onReceivedChevronClick(){
+                console.log("chevron clickata");
+                if(this.dropDownReceivedMessageVisible === ""){
+                    this.dropDownReceivedMessageVisible = "attiva";
+                }else {
+                 this.dropDownReceivedMessageVisible = "";
+                }
+             } */
+             /* PROBLEM:
+                quando clicco sulla chevron down di un messaggio sent o received, mi apre le tendine di tutti i messaggi (sent o received)
+                praticamente con due funzioni ho diviso i messaggi dalla categoria sent a received, mentre devo fare una funzione che 
+                prenda singolarmente il messaggio clickato
+                possibili ipotesi
+                nel data uso una variabile che salva il messaggio clickato in un array(???)
+             */
         },
         
     })

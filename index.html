@@ -111,11 +111,33 @@
                         <div v-if="singleMessage.status === 'received'" class="received_message_text_container">
                             <p>{{ singleMessage.text }}</p>
                             <p class="small_date">{{singleMessage.date}}</p>
+                            <!-- <i class="fas fa-chevron-down received_chevron" @click="onReceivedChevronClick()"></i>
+                            <div class="drop_down_received_message" :class="dropDownReceivedMessageVisible">
+                                <ul>
+                                    <li>
+                                        <p>message info</p> 
+                                    </li>
+                                    <li>
+                                        <p>delete message</p>
+                                    </li>
+                                </ul>
+                            </div> -->
                         </div>
                         
                         <div v-else-if="singleMessage.status === 'sent'" class="sent_message_text_container">
                             <p>{{ singleMessage.text }}</p>
                             <p class="small_date">{{singleMessage.date}}</p>
+                            <!-- <i class="fas fa-chevron-down sent_chevron" @click="onSentChevronClick()"></i>
+                            <div class="drop_down_sent_message" :class="dropDownSentMessageVisible">
+                                <ul>
+                                    <li>
+                                        <p>message info</p> 
+                                    </li>
+                                    <li>
+                                        <p>delete message</p>
+                                    </li>
+                                </ul>
+                            </div> -->
                         </div>
                     </div>
 
