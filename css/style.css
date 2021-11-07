@@ -215,6 +215,7 @@ a{
     padding: 5px;
     position: absolute;
     top: 18px;
+    right: 10px;
     display: none;
     user-select: none;
     min-width: 120px;
