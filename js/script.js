@@ -10,6 +10,12 @@ window.addEventListener("DOMContentLoaded", function () {
                     userName: "Marco",
                     profilePic: "img/avatar_1.jpg",
                     messages: [
+                        /*
+                            questo messaggio di default è invisibile nella pagina e serve a non far andare in errore il codice
+                            quando l'ultimo messaggio della chat (nell'array dei messaggi) viene eliminato
+                        */
+                        {date: "", text: "", status: "", check: "default"},
+                        
                         {
                             date: "10/01/2020 15:30:55",
                             text: "sono Marco",
@@ -29,6 +35,8 @@ window.addEventListener("DOMContentLoaded", function () {
                     userName: "Luca",
                     profilePic: "img/avatar_2.jpg",
                     messages: [
+                        {date: "", text: "", status: "",check: "default"},
+
                         {
                             date: "10/01/2020 15:30:55",
                             text: "sono Luca",
@@ -48,6 +56,8 @@ window.addEventListener("DOMContentLoaded", function () {
                     userName: "Giovanni",
                     profilePic: "img/avatar_3.jpg",
                     messages: [
+                        {date: "", text: "", status: "",check: "default"},
+
                         {
                             date: "10/01/2020 15:30:55",
                             text: "sono Giovanni",
@@ -67,6 +77,8 @@ window.addEventListener("DOMContentLoaded", function () {
                     userName: "Luigi",
                     profilePic: "img/avatar_4.jpg",
                     messages: [
+                        {date: "", text: "", status: "",check: "default"},
+
                         {
                             date: "10/01/2020 15:30:55",
                             text: "sono Luigi",
@@ -101,7 +113,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
                 console.log(`mando un messaggio a ${this.activeChat.userName}`, this.activeChat.messages);
                 /* devo eseguire all'interno dell'array di oggetti: messages, un oggetto contenente il messaggio */
-                this.activeChat.messages.push({ date: dayjs().format("DD/MM/YY HH:mm:ss"), text: this.inputNewMessage, status: "sent", check: ""})
+                this.activeChat.messages.push({ date: dayjs().format("DD/MM/YY HH:mm:ss"), text: this.inputNewMessage, status: "sent", check: "" })
                 this.inputNewMessage = "";
 
 
@@ -109,7 +121,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
                 setTimeout(() => {
                     console.log("risposta");
-                    this.activeChat.messages.push({ date: dayjs().format("DD/MM/YY HH:mm:ss"), text: "ok", status: "received", check: ""})
+                    this.activeChat.messages.push({ date: dayjs().format("DD/MM/YY HH:mm:ss"), text: "ok", status: "received", check: "" })
                     console.log("questo è lulimo accesso", this.activeChat.lastSeen);
                     this.activeChat.lastSeen = dayjs().format("DD/MM/YY HH:mm:ss");
                 }, 1000)
@@ -129,13 +141,15 @@ window.addEventListener("DOMContentLoaded", function () {
             onChevronClick(message) {
                 console.log(`clicco messaggio in chat di  ${this.activeChat.userName} numero ${message}`, this.activeChat.messages[message]);
                 //questo if funziona da toggle per aggiungere o rimuovere la classe
-                if(this.activeChat.messages[message].check === ""){
-                    this.activeChat.messages[message].check = "attiva"
-                }else{
+                if (this.activeChat.messages[message].check === "") {
+                    this.activeChat.messages[message].check = "attiva";
+                } else {
                     this.activeChat.messages[message].check = ""
                 }
+            },
+            deleteMessage(message){
+                this.activeChat.messages.splice(message, 1)
             }
-        },
-
+        }
     })
 })
