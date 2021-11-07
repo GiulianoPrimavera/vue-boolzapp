@@ -111,6 +111,7 @@
                         <div v-if="singleMessage.status === 'received'" class="received_message_text_container">
                             <p>{{ singleMessage.text }}</p>
                             <p class="small_date">{{singleMessage.date}}</p>
+                            <!-- grazie al dato "i" recuperato con il v-for, resco a recuperare l'indice del messaggio all'interno dell'array dei messaggi -->
                             <i class="fas fa-chevron-down" @click="onChevronClick(i)"></i>
                             <div class="drop_down_message drop_down_received_message" :class="singleMessage.check">
                                 <ul>

@@ -85,9 +85,7 @@ window.addEventListener("DOMContentLoaded", function () {
             ],
             activeChat: {},
             inputNewMessage: "",
-            chatSrcText: "",
-            /* dropDownMessageVisible: "" */
-            /* dropDownReceivedMessageVisible: "" */
+            chatSrcText: ""
         },
         methods: {
             onChatClick(chat) {
@@ -130,6 +128,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
             onChevronClick(message) {
                 console.log(`clicco messaggio in chat di  ${this.activeChat.userName} numero ${message}`, this.activeChat.messages[message]);
+                //questo if funziona da toggle per aggiungere o rimuovere la classe
                 if(this.activeChat.messages[message].check === ""){
                     this.activeChat.messages[message].check = "attiva"
                 }else{
